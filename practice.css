@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Distressed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #2D3035;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    width: 75%;
+    height: 75%;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    border-radius: 30px;
+    background-color: #222327;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.home-container .form{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    position: relative;
+    /* padding: 100px; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bars {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.bars:hover .bar{
+    transform: scale(2);
+}
+    
+.bar {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.158);
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+    
+.bar.active {
+    background-color: rgba(255, 255, 255, 0.741);
+    transition-delay: 0.2s;
+}
+    
+.bar.semi-active {
+    background-color: rgba(255, 255, 255, 0.427);
+    transition-delay: 0.1s;
+    }
+
+
+.sign-in-info {
+    /* border: 1px solid white; */
+    margin-bottom: 100px;
+
+}
+
+.sign-in-info h1 {
+    color: white;
+    margin-bottom: 50px;
+}
+
+.form-input p{
+    color: white;
+    font-size: 10px;
+    margin-bottom: 12px;
+    
+}
+
+.form-input input {
+    width: 100%;
+    color: #ffffff;
+    background-color: #161618;
+    padding: 10px;
+    border-radius: 9px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.form-input input:focus {
+    outline: none;
+    border: .5px solid white;
+}
+
+.pass-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-in-info button {
+    width: 100%;
+    padding: 10px;
+    background-color: #b6b7b8da;
+    border-radius: 9px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.sign-in-info button:hover {
+    transform: rotate(-2deg);
+    transform-origin: top left;
+}
+
+.form .sign-up {
+    font-size: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.366);
+    margin-top: 20px;
+}
+.form .sign-up-link {
+    color: white;
+}
+
+
+.home-container .image {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    background: url(comet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.home-container .image .logo {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+
+.logo  h1 {
+    text-align: center;
+    color: white;
+    font-family: "Rubik Distressed", system-ui;
+}
+
+.logo {
+    transition: all 0.5s;
+    
+}
+
+.logo:hover {
+    transform: scale(1.3) translateY(-10px) rotate(10deg);
+    /* transition: all 0.5s; */
+}
+
+.box {
+    width: 100px;
+    height: 400px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.box .inn {
+    width: 20px;
+    height: 20px;
+    background: #161618;
+    animation: rotate 3s ease infinite forwards;
+}
+
+/* .box:hover .inn{
+    animation: fadein 5s ease-out forwards;
+} */
+
+/* @keyframes fadein {
+    0% {
+        transform: rotate(0deg);
+        transform: translateY(300px);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        background: orange;
+        transform: rotate(90deg);
+        transform: translateY(0px) scaleX(400%);
+
+    }
+} */
+
+@keyframes rotate {
+    0% {
+        transform: translateY(-20px);
+
+    }
+    25% {
+        background: yellow;
+    }
+    50% {
+        transform: translateY(40px);
+        background: green;
+    }
+    75% {
+        background: pink;
+    }
+    100%{
+        transform: translateY(-40px);
+        background: red;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 780px) {
+    .wrapper {
+        padding: 30px 20px;
+    }
+    .home-container {
+        width: 100%;
+        height: 100%;
+    }
+    .bars {
+        display: none;
+    }
+    .home-container .form {
+        width: 100%;
+        background: transparent;
+        z-index: 50;
+        background: url(./comet.jpg) no-repeat bottom;
+        background-size: cover;
+        padding: 10px;
+    }
+    .home-container .image {
+        display: none;
+    }
+
+    .sign-in-info {
+        width: 100%;
+    }
+}
+
+
+/* ASSIGNMENT */
+
+/* Copy the practical animation code on page 103-104 and mess around with the values and see what happens */
